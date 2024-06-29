@@ -159,6 +159,7 @@
 		DA6671DA2C2EAD21002C4406 /* PropertyFinderTests */ = {
 			isa = PBXGroup;
 			children = (
+				DA66722E2C302C4D002C4406 /* Mock */,
 				DA6671DB2C2EAD21002C4406 /* PropertyFinderTests.swift */,
 			);
 			path = PropertyFinderTests;
@@ -247,6 +248,13 @@
 			children = (
 			);
 			path = DataModels;
+			sourceTree = "<group>";
+		};
+		DA66722E2C302C4D002C4406 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
