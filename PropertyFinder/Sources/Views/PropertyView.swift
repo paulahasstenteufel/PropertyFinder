@@ -9,17 +9,9 @@ import SwiftUI
 
 struct PropertyView: View {
     var body: some View {
-        VStack(alignment: .leading, spacing: .small) {
-            AsyncImage(url: URL(string: "")) { image in
-                image
-                    .resizable()
-                    .scaledToFill()
-                    .clipped()
-                
-            } placeholder: {
-                Color.black
-            }
-            .padding(.bottom, .large)
+        VStack(alignment: .leading, spacing: 0) {
+            BaseImageView(imageURL: "")
+                .padding(.bottom, .small)
             
             Text("Placeholder Streeetname 3")
                 .font(.h1)

@@ -30,6 +30,10 @@
 		DA66721C2C2EFC35002C4406 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA66720D2C2EFC35002C4406 /* Roboto-Bold.ttf */; };
 		DA66721D2C2EFC35002C4406 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA66720E2C2EFC35002C4406 /* Roboto-Thin.ttf */; };
 		DA66721E2C2EFC35002C4406 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA66720F2C2EFC35002C4406 /* Roboto-Black.ttf */; };
+		DA6672212C3012D2002C4406 /* AreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6672202C3012D2002C4406 /* AreaView.swift */; };
+		DA6672232C301428002C4406 /* BaseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6672222C301428002C4406 /* BaseImageView.swift */; };
+		DA6672252C30159F002C4406 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6672242C30159F002C4406 /* RowView.swift */; };
+		DA6672272C3015B4002C4406 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6672262C3015B4002C4406 /* DetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +80,10 @@
 		DA66720D2C2EFC35002C4406 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		DA66720E2C2EFC35002C4406 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		DA66720F2C2EFC35002C4406 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		DA6672202C3012D2002C4406 /* AreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaView.swift; sourceTree = "<group>"; };
+		DA6672222C301428002C4406 /* BaseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseImageView.swift; sourceTree = "<group>"; };
+		DA6672242C30159F002C4406 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
+		DA6672262C3015B4002C4406 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,10 +134,10 @@
 		DA6671C92C2EAD1E002C4406 /* PropertyFinder */ = {
 			isa = PBXGroup;
 			children = (
+				DA6671CA2C2EAD1E002C4406 /* PropertyFinderApp.swift */,
 				DA6671FF2C2EFC35002C4406 /* Resources */,
 				DA6671F62C2EFB86002C4406 /* DesignSystem */,
 				DA6671F52C2EAFD9002C4406 /* Sources */,
-				DA6671CA2C2EAD1E002C4406 /* PropertyFinderApp.swift */,
 			);
 			path = PropertyFinder;
 			sourceTree = "<group>";
@@ -162,7 +170,9 @@
 		DA6671F52C2EAFD9002C4406 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				DA6671CC2C2EAD1E002C4406 /* PropertyView.swift */,
+				DA66721F2C3012B3002C4406 /* Views */,
+				DA6672242C30159F002C4406 /* RowView.swift */,
+				DA6672262C3015B4002C4406 /* DetailsView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -205,6 +215,16 @@
 				DA66720F2C2EFC35002C4406 /* Roboto-Black.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		DA66721F2C3012B3002C4406 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DA6671CC2C2EAD1E002C4406 /* PropertyView.swift */,
+				DA6672202C3012D2002C4406 /* AreaView.swift */,
+				DA6672222C301428002C4406 /* BaseImageView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,9 +372,13 @@
 			files = (
 				DA6671CD2C2EAD1E002C4406 /* PropertyView.swift in Sources */,
 				DA6671FD2C2EFB86002C4406 /* Fonts.swift in Sources */,
+				DA6672272C3015B4002C4406 /* DetailsView.swift in Sources */,
 				DA6671FC2C2EFB86002C4406 /* Colors.swift in Sources */,
+				DA6672252C30159F002C4406 /* RowView.swift in Sources */,
+				DA6672212C3012D2002C4406 /* AreaView.swift in Sources */,
 				DA6671CB2C2EAD1E002C4406 /* PropertyFinderApp.swift in Sources */,
 				DA6671FB2C2EFB86002C4406 /* Dimensions.swift in Sources */,
+				DA6672232C301428002C4406 /* BaseImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

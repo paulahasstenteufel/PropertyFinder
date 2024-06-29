@@ -10,9 +10,10 @@ import SwiftUI
 extension Font {
     static let h1: Font =  .roboto(.medium, size: 22)
     static let h2: Font = .roboto(.medium, size: 18)
-    static let body: Font = .roboto(.regular, size: 20)
+    static let description: Font = .roboto(.regular, size: 16)
     
-    static let price: Font = .roboto(.bold, size: 16)
+    static let summary: Font = .roboto(.bold, size: 16)
+    static let price: Font = .roboto(.black, size: 18)
     static let detail: Font = .roboto(.regular, size: 16)
 }
 
