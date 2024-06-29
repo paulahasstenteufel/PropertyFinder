@@ -34,6 +34,8 @@
 		DA6672232C301428002C4406 /* BaseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6672222C301428002C4406 /* BaseImageView.swift */; };
 		DA6672252C30159F002C4406 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6672242C30159F002C4406 /* RowView.swift */; };
 		DA6672272C3015B4002C4406 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6672262C3015B4002C4406 /* DetailsView.swift */; };
+		DA66722B2C3023DB002C4406 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA66722A2C3023DB002C4406 /* APIClient.swift */; };
+		DA66722D2C302463002C4406 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA66722C2C302463002C4406 /* APIRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		DA6672222C301428002C4406 /* BaseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseImageView.swift; sourceTree = "<group>"; };
 		DA6672242C30159F002C4406 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 		DA6672262C3015B4002C4406 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		DA66722A2C3023DB002C4406 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		DA66722C2C302463002C4406 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,8 @@
 		DA6671C92C2EAD1E002C4406 /* PropertyFinder */ = {
 			isa = PBXGroup;
 			children = (
+				DA6672292C302259002C4406 /* DataModels */,
+				DA6672282C302217002C4406 /* Networking */,
 				DA6671CA2C2EAD1E002C4406 /* PropertyFinderApp.swift */,
 				DA6671FF2C2EFC35002C4406 /* Resources */,
 				DA6671F62C2EFB86002C4406 /* DesignSystem */,
@@ -225,6 +231,22 @@
 				DA6672222C301428002C4406 /* BaseImageView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DA6672282C302217002C4406 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				DA66722A2C3023DB002C4406 /* APIClient.swift */,
+				DA66722C2C302463002C4406 /* APIRequest.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		DA6672292C302259002C4406 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,9 +395,11 @@
 				DA6671CD2C2EAD1E002C4406 /* PropertyView.swift in Sources */,
 				DA6671FD2C2EFB86002C4406 /* Fonts.swift in Sources */,
 				DA6672272C3015B4002C4406 /* DetailsView.swift in Sources */,
+				DA66722B2C3023DB002C4406 /* APIClient.swift in Sources */,
 				DA6671FC2C2EFB86002C4406 /* Colors.swift in Sources */,
 				DA6672252C30159F002C4406 /* RowView.swift in Sources */,
 				DA6672212C3012D2002C4406 /* AreaView.swift in Sources */,
+				DA66722D2C302463002C4406 /* APIRequest.swift in Sources */,
 				DA6671CB2C2EAD1E002C4406 /* PropertyFinderApp.swift in Sources */,
 				DA6671FB2C2EFB86002C4406 /* Dimensions.swift in Sources */,
 				DA6672232C301428002C4406 /* BaseImageView.swift in Sources */,
