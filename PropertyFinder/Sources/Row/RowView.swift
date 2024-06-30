@@ -17,9 +17,25 @@ struct RowView: View {
             }
             
             if let property = viewModel.property {
-                PropertyView(property: property)
+                PropertyHeaderView(model: property)
+                
+                propertySummaryView
             }
         }
+    }
+    
+    var propertySummaryView: some View {
+        HStack {
+            Text("1 234 567 SEK")
+            Spacer()
+            
+            Text("1 234 SQM")
+            Spacer()
+            
+            Text("12 rooms")
+        }
+        .font(.detail)
+        .foregroundColor(.strong)
     }
 }
 

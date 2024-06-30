@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AreaView: View {
+    @State var area: Area
+    
     var body: some View {
         ZStack {
             Color.soft
@@ -35,6 +37,6 @@ struct AreaView: View {
     }
 }
 
-#Preview {
-    AreaView()
-}
+//#Preview {
+//    AreaView()
+//}

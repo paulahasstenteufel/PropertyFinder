@@ -1,5 +1,5 @@
 //
-//  PropertyView.swift
+//  PropertyHeaderView.swift
 //  PropertyFinder
 //
 //  Created by Paula Hasstenteufel on 2024-06-28.
@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct PropertyView: View {
+struct PropertyHeaderView: View {
+    @State var model: Property
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             BaseImageView(imageURL: "")
@@ -24,6 +26,6 @@ struct PropertyView: View {
     }
 }
 
-#Preview {
-    PropertyView()
-}
+//#Preview {
+//    PropertyView()
+//}
