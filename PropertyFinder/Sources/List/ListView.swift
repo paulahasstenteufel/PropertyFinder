@@ -9,10 +9,18 @@ import SwiftUI
 
 struct ListView: View {
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(viewModel.items, id: \.id) { item in
-                    RowView(viewModel: RowViewModel(modelType: item))
+        if viewModel.isLoading {
+            VStack(spacing: .large) {
+                LoadingView()
+                LoadingView()
+            }
+            
+        } else {
+            NavigationView {
+                List {
+                    ForEach(viewModel.items, id: \.id) { item in
+                        RowView(viewModel: viewModel.row(for: item))
+                    }
                 }
             }
         }
@@ -20,4 +28,8 @@ struct ListView: View {
     
     // MARK: Private
     @StateObject private var viewModel = ListViewModel()
+}
+
+#Preview {
+    ListView()
 }

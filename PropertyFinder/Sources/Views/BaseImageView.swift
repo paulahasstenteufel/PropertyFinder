@@ -18,7 +18,7 @@ struct BaseImageView: View {
                 .clipped()
             
         } placeholder: {
-            Color.black
+            LoadingView().frame(height: .imageHeight)
         }
     }
 }

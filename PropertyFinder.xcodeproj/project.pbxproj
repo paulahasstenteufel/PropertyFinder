@@ -45,6 +45,8 @@
 		DA66723F2C317549002C4406 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA66723E2C317549002C4406 /* ListViewModel.swift */; };
 		DA6672432C318AA0002C4406 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6672422C318AA0002C4406 /* ListView.swift */; };
 		DA6672452C318FA6002C4406 /* RowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6672442C318FA6002C4406 /* RowViewModel.swift */; };
+		DA7B62272C31DB170000B116 /* LoadingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B62262C31DB170000B116 /* LoadingAnimationView.swift */; };
+		DA7B622A2C31F98A0000B116 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = DA7B62292C31F98A0000B116 /* CachedAsyncImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +108,7 @@
 		DA66723E2C317549002C4406 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		DA6672422C318AA0002C4406 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		DA6672442C318FA6002C4406 /* RowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowViewModel.swift; sourceTree = "<group>"; };
+		DA7B62262C31DB170000B116 /* LoadingAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAnimationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA7B622A2C31F98A0000B116 /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +253,7 @@
 				DA6671CC2C2EAD1E002C4406 /* PropertyHeaderView.swift */,
 				DA6672202C3012D2002C4406 /* AreaView.swift */,
 				DA6672222C301428002C4406 /* BaseImageView.swift */,
+				DA7B62262C31DB170000B116 /* LoadingAnimationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -316,6 +321,9 @@
 			dependencies = (
 			);
 			name = PropertyFinder;
+			packageProductDependencies = (
+				DA7B62292C31F98A0000B116 /* CachedAsyncImage */,
+			);
 			productName = PropertyFinder;
 			productReference = DA6671C72C2EAD1E002C4406 /* PropertyFinder.app */;
 			productType = "com.apple.product-type.application";
@@ -388,6 +396,9 @@
 				Base,
 			);
 			mainGroup = DA6671BE2C2EAD1E002C4406;
+			packageReferences = (
+				DA7B62282C31F98A0000B116 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+			);
 			productRefGroup = DA6671C82C2EAD1E002C4406 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -448,6 +459,7 @@
 				DA6671CD2C2EAD1E002C4406 /* PropertyHeaderView.swift in Sources */,
 				DA66723F2C317549002C4406 /* ListViewModel.swift in Sources */,
 				DA6671FD2C2EFB86002C4406 /* Fonts.swift in Sources */,
+				DA7B62272C31DB170000B116 /* LoadingAnimationView.swift in Sources */,
 				DA6672432C318AA0002C4406 /* ListView.swift in Sources */,
 				DA6672362C314F41002C4406 /* PropertyService.swift in Sources */,
 				DA6672272C3015B4002C4406 /* PropertyDetailsView.swift in Sources */,
@@ -794,6 +806,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DA7B62282C31F98A0000B116 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DA7B62292C31F98A0000B116 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA7B62282C31F98A0000B116 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DA6671BF2C2EAD1E002C4406 /* Project object */;
 }

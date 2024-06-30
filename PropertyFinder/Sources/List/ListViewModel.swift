@@ -8,10 +8,17 @@
 import SwiftUI
 
 class ListViewModel: ObservableObject {
+    @Published var isLoading = true
     @Published var items: [ModelType] = []
-
+    
     init() {
-        Task { await fetchProperties() }
+        Task {
+            await fetchProperties()
+        }
+    }
+    
+    func row(for item: ModelType) -> RowViewModel {
+        return RowViewModel(modelType: item)
     }
     
     // MARK: Private
@@ -22,8 +29,10 @@ class ListViewModel: ObservableObject {
         do {
             let response = try result.get()
             items = response.items
+            isLoading = false
             
         } catch {
+            // Next steps: Add UI error handling 
             print(error.localizedDescription)
         }
     }

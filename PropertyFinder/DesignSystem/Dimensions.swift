@@ -13,4 +13,6 @@ extension CGFloat {
     static let small = 10.0
     
     static let frame = 2.0
+    static let imageHeight = 150.0
+    static let lineHeight = 20.0
 }
