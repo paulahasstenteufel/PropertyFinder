@@ -9,8 +9,10 @@ import Foundation
 
 struct Area {
     let id: String
-    let area: String
+    let area: String?
     let ratingFormatted: String?
     let averagePrice: Decimal?
-    let imageURL: String
+    let image: String?
 }
+
+extension Area: Identifiable, Decodable { }

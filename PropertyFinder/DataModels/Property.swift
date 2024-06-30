@@ -8,15 +8,21 @@
 import Foundation
 
 struct Property {
-    let highlighted: Bool
+    var highlighted: Bool
+    
     let id: String
     let askingPrice: Decimal?
     let monthlyFee: Decimal?
     let municipality: String?
-    let area: String
+    let area: String?
     let daysSincePublish: Int?
     let livingArea: Double?
     let numberOfRooms: Int?
     let streetAddress: String?
-    let imageURL: String
+    let image: String?
+    
+    var description: String?
+    var patio: String?
 }
+
+extension Property: Identifiable, Decodable { }

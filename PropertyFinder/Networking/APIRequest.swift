@@ -12,15 +12,23 @@ protocol Endpoint {
     var host: String { get }
     var path: String { get }
     var method: String { get }
-    var header: [String: String]? { get }
-    var body: [String: String]? { get }
 }
 
-extension Endpoint {
+enum PropertyEndpoint {
+    case overview
+    case propertyDetail(id: Int)
+}
+
+extension PropertyEndpoint: Endpoint {
     var scheme: String { "https" }
     var host: String { "pastebin.com" }
-    var path: String { "raw/nH5NinBi" }
     var method: String { "GET" }
+    var path: String {
+        switch self {
+        case .overview: return "raw/nH5NinBi"
+        case .propertyDetail(let id): return "raw/uj6vtukE"
+        }
+    }
 }
 
 enum RequestError: Error {
