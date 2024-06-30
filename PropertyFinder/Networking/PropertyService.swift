@@ -9,7 +9,7 @@ import Foundation
 
 protocol PropertyServiceable {
     func fetchOverview() async -> Result<Response, RequestError>
-    func fetchDetails(id: Int) async -> Result<Property, RequestError>
+    func fetchDetails(id: String) async -> Result<Property, RequestError>
 }
 
 struct PropertyService: APIClient, PropertyServiceable {
@@ -17,7 +17,7 @@ struct PropertyService: APIClient, PropertyServiceable {
         return await sendRequest(endpoint: PropertyEndpoint.overview, model: Response.self)
     }
     
-    func fetchDetails(id: Int) async -> Result<Property, RequestError> {
+    func fetchDetails(id: String) async -> Result<Property, RequestError> {
         return await sendRequest(endpoint: PropertyEndpoint.propertyDetail(id: id), model: Property.self)
     }
 }

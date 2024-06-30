@@ -27,9 +27,14 @@ extension APIClient {
         
         do {
             let (data, response) = try await URLSession.shared.data(for: request, delegate: nil)
-            guard let decodedResponse = try? JSONDecoder().decode(model, from: data) else {
+            guard let _ = response as? HTTPURLResponse else {
                 return .failure(.noData)
             }
+            
+            guard let decodedResponse = try? JSONDecoder().decode(model.self, from: data) else {
+                return .failure(.decodingFailed)
+            }
+            
             return .success(decodedResponse)
             
         } catch {

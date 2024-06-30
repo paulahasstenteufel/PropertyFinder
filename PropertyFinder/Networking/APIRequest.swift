@@ -16,7 +16,7 @@ protocol Endpoint {
 
 enum PropertyEndpoint {
     case overview
-    case propertyDetail(id: Int)
+    case propertyDetail(id: String)
 }
 
 extension PropertyEndpoint: Endpoint {
@@ -25,8 +25,8 @@ extension PropertyEndpoint: Endpoint {
     var method: String { "GET" }
     var path: String {
         switch self {
-        case .overview: return "raw/nH5NinBi"
-        case .propertyDetail(let id): return "raw/uj6vtukE"
+        case .overview: return "/raw/nH5NinBi"
+        case .propertyDetail: return "/raw/uj6vtukE" // Ignoring resource identifier
         }
     }
 }
@@ -34,6 +34,7 @@ extension PropertyEndpoint: Endpoint {
 enum RequestError: Error {
     case invalidURL
     case noData
+    case decodingFailed
     case unknown
     
     var customMessage: String {
@@ -42,6 +43,8 @@ enum RequestError: Error {
             return "Invalid URL"
         case .noData:
             return "No Data"
+        case .decodingFailed:
+            return "Decoding Failed"
         case .unknown:
             return "Unexpected Error"
         }

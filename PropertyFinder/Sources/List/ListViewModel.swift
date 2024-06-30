@@ -28,8 +28,11 @@ class ListViewModel: ObservableObject {
         let result = await propertyService.fetchOverview()
         do {
             let response = try result.get()
-            items = response.items
-            isLoading = false
+            DispatchQueue.main.async { [weak self] in
+                guard let self else { return }
+                self.isLoading = false
+                self.items = response.items
+            }
             
         } catch {
             // Next steps: Add UI error handling 

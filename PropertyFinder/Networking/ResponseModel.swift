@@ -14,7 +14,7 @@ struct Response: Decodable {
 enum ModelType: Decodable {
     case property(Property)
     case area(Area)
-
+    
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let type = try container.decode(String.self, forKey: .type)
@@ -22,12 +22,12 @@ enum ModelType: Decodable {
         switch type {
         case "HighlightedProperty":
             var data = try Property(from: decoder)
-            data.highlighted = true
+            data.highlighted = "true"
             self = .property(data)
             
         case "Property":
             var data = try Property(from: decoder)
-            data.highlighted = false
+            data.highlighted = "false"
             self = .property(data)
             
         case "Area":
@@ -35,7 +35,7 @@ enum ModelType: Decodable {
             self = .area(data)
             
         default:
-            throw DecodingError.dataCorruptedError(forKey: .type, in: container, debugDescription: "Invalid type")
+            throw RequestError.decodingFailed
         }
     }
 

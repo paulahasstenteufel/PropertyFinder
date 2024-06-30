@@ -21,9 +21,7 @@ class RowViewModel: ObservableObject {
     }
     
     func getPropertyDetails() {
-        guard let property else {
-            return
-        }
+        guard let property else { return }
         
         Task {
             await fetchPropertyDetails(id: property.id)
@@ -31,7 +29,21 @@ class RowViewModel: ObservableObject {
     }
     
     // MARK: Private
+    private let propertyService: PropertyServiceable = PropertyService()
+    
     private func fetchPropertyDetails(id: String) async {
-        
+        let result = await propertyService.fetchDetails(id: "")
+        do {
+            let response = try result.get()
+            DispatchQueue.main.async { [weak self] in
+                guard let self else { return }
+                self.property?.description = response.description
+                self.property?.patio = response.patio
+            }
+            
+        } catch {
+            // Next steps: Add UI error handling
+            print(error.localizedDescription)
+        }
     }
 }
