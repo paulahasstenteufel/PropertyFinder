@@ -24,3 +24,10 @@ struct Property {
 }
 
 extension Property: Identifiable, Decodable { }
+
+extension Property {
+    mutating func updateWithDetails(_ details: Property) {
+        self.description = details.description
+        self.patio = details.patio
+    }
+}

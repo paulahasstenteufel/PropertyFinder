@@ -37,8 +37,7 @@ class RowViewModel: ObservableObject {
             let response = try result.get()
             DispatchQueue.main.async { [weak self] in
                 guard let self else { return }
-                self.property?.description = response.description
-                self.property?.patio = response.patio
+                self.property?.updateWithDetails(response)
             }
             
         } catch {
