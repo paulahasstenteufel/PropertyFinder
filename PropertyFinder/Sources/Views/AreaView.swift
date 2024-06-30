@@ -8,35 +8,48 @@
 import SwiftUI
 
 struct AreaView: View {
-    @State var area: Area
+    @State var model: Area
     
     var body: some View {
         ZStack {
-            Color.soft
+            Color.brandMedium
             
-            areaView
-                .padding(.vertical, .large)
+            BaseImageView(imageURL: model.image, largeImage: true)
+                .padding(.vertical, .ginormous)
+                .overlay {
+                    VStack(alignment: .center) {
+                        Text(model.area)
+                            .font(.h1)
+                            .fontWeight(.bold)
+                            .foregroundColor(.strong)
+                        
+                        Spacer()
+
+                        detailsView
+                            .frame(height: .lineHeight)
+                    }
+                    .frame(maxHeight: .imageHeight * 1.4)
+                }
         }
     }
     
-    private var areaView: some View {
-        VStack {
-            Text("Placeholder Area Name")
-                .font(.h1)
-                .foregroundColor(.strong)
-            
-            BaseImageView(imageURL: "")
-            
-            HStack {
-                Text("Rating Placeholder")
-                Spacer()
-                Text("Avg. Price Placeholder")
-            }
-            .font(.summary)
+    var detailsView: some View {
+        HStack {
+            Text(model.displayRating)
+            Text(model.displayAveragePrice)
         }
+        .font(.summary)
+        .foregroundColor(.medium)
     }
 }
 
-//#Preview {
-//    AreaView()
-//}
+private extension Area {
+    var displayRating: String {
+        guard let ratingFormatted else { return "" }
+        return "Rating: \(ratingFormatted)"
+    }
+    var displayAveragePrice: String {
+        guard let averagePrice else { return "" }
+        return "Average price: \(averagePrice)"
+    }
+}

@@ -11,34 +11,34 @@ struct RowView: View {
     @StateObject var viewModel: RowViewModel
     
     var body: some View {
-        VStack {
+        Group {
             if let area = viewModel.area {
-                AreaView(area: area)
+                AreaView(model: area)
+                    .padding(.vertical, .large)
             }
             
             if let property = viewModel.property {
-                PropertyHeaderView(model: property)
-                
-                propertySummaryView
+                NavigationLink(destination: PropertyDetailsView(model: property)) {
+                    VStack {
+                        PropertyHeaderView(model: property)
+                        
+                        HStack {
+                            Text(property.displayAskingPrice)
+                            Spacer()
+                            
+                            Text(property.displayLivingArea)
+                            Spacer()
+                            
+                            Text(property.displayNumberOfRooms)
+                            Spacer()
+                        }
+                        .font(.detail)
+                        .foregroundColor(.strong)
+                    }
+                    .padding(.all, .large)
+                    .buttonStyle(.plain)
+                }
             }
         }
     }
-    
-    var propertySummaryView: some View {
-        HStack {
-            Text("1 234 567 SEK")
-            Spacer()
-            
-            Text("1 234 SQM")
-            Spacer()
-            
-            Text("12 rooms")
-        }
-        .font(.detail)
-        .foregroundColor(.strong)
-    }
 }
-
-//#Preview {
-//    RowView()
-//}

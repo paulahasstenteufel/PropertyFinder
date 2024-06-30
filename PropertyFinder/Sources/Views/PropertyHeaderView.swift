@@ -9,23 +9,26 @@ import SwiftUI
 
 struct PropertyHeaderView: View {
     @State var model: Property
+    var largeImage = false
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            BaseImageView(imageURL: "")
-                .padding(.bottom, .small)
+            BaseImageView(imageURL: model.image, largeImage: largeImage)
+                .overlay {
+                    if model.highlighted == "true" {
+                        Color.clear
+                            .border(Color.golden, width: .border)
+                    }
+                }
             
-            Text("Placeholder Streeetname 3")
+            Text(model.displayAddress)
+                .padding(.top, .small)
                 .font(.h1)
                 .foregroundColor(.strong)
             
-            Text("Placeholder Area Address")
+            Text(model.displayArea)
                 .font(.h2)
-                .foregroundColor(.medium)
+                .foregroundColor(.soft)
         }
     }
 }
-
-//#Preview {
-//    PropertyView()
-//}

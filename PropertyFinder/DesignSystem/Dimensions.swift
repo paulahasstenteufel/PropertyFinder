@@ -8,11 +8,12 @@
 import Foundation
 
 extension CGFloat {
+    static let ginormous = 50.0
     static let large = 18.0
     static let primary = 16.0
     static let small = 10.0
     
-    static let frame = 2.0
+    static let border = 4.0
     static let imageHeight = 150.0
     static let lineHeight = 20.0
 }
