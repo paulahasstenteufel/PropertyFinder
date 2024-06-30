@@ -47,3 +47,40 @@ class RowViewModel: ObservableObject {
         }
     }
 }
+
+extension Property {
+    var displayAskingPrice: String {
+        guard let text = askingPrice?.description else { return "" }
+        return "\(text) kr"
+    }
+    
+    var displayLivingArea: String {
+        guard let livingArea else { return "" }
+        return "\(livingArea) m2"
+    }
+    
+    var displayNumberOfRooms: String {
+        guard let numberOfRooms else { return "" }
+        return "Rooms: \(numberOfRooms)"
+    }
+    
+    var displayPatio: String {
+        guard let patio else { return "" }
+        return "Patio: \(patio)"
+    }
+    
+    var displayDaysSincePublish: String {
+        guard let daysSincePublish else { return "" }
+        return "Days since Publish: \(daysSincePublish)"
+    }
+    
+    var displayAddress: String {
+        streetAddress ?? ""
+    }
+    
+    var displayArea: String {
+        guard let area, let municipality else { return "" }
+        return "\(area), \(municipality)"
+    }
+}
+
