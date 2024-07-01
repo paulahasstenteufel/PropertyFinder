@@ -11,7 +11,8 @@ class RowViewModel: ObservableObject {
     @Published var property: Property?
     @Published var area: Area?
     
-    init(modelType: ModelType) {
+    init(service: PropertyServiceable, modelType: ModelType) {
+        propertyService = service
         switch modelType {
         case .area(let model): 
             area = model
@@ -28,10 +29,7 @@ class RowViewModel: ObservableObject {
         }
     }
     
-    // MARK: Private
-    private let propertyService: PropertyServiceable = PropertyService()
-    
-    private func fetchPropertyDetails(id: String) async {
+    func fetchPropertyDetails(id: String) async {
         let result = await propertyService.fetchDetails(id: "")
         do {
             let response = try result.get()
@@ -45,6 +43,9 @@ class RowViewModel: ObservableObject {
             print(error.localizedDescription)
         }
     }
+    
+    // MARK: Private
+    private let propertyService: PropertyServiceable
 }
 
 extension Property {

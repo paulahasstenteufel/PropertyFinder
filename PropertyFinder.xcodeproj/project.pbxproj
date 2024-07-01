@@ -47,6 +47,9 @@
 		DA6672452C318FA6002C4406 /* RowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6672442C318FA6002C4406 /* RowViewModel.swift */; };
 		DA7B62272C31DB170000B116 /* LoadingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B62262C31DB170000B116 /* LoadingAnimationView.swift */; };
 		DA7B622A2C31F98A0000B116 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = DA7B62292C31F98A0000B116 /* CachedAsyncImage */; };
+		DA7B622C2C3223620000B116 /* MockPropertyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B622B2C3223620000B116 /* MockPropertyService.swift */; };
+		DA7B622E2C3223CB0000B116 /* ListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B622D2C3223CB0000B116 /* ListViewModelTests.swift */; };
+		DA7B62302C3235370000B116 /* RowViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B622F2C3235370000B116 /* RowViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +112,9 @@
 		DA6672422C318AA0002C4406 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		DA6672442C318FA6002C4406 /* RowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowViewModel.swift; sourceTree = "<group>"; };
 		DA7B62262C31DB170000B116 /* LoadingAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAnimationView.swift; sourceTree = "<group>"; };
+		DA7B622B2C3223620000B116 /* MockPropertyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPropertyService.swift; sourceTree = "<group>"; };
+		DA7B622D2C3223CB0000B116 /* ListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelTests.swift; sourceTree = "<group>"; };
+		DA7B622F2C3235370000B116 /* RowViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +189,8 @@
 			children = (
 				DA66722E2C302C4D002C4406 /* Mock */,
 				DA6671DB2C2EAD21002C4406 /* PropertyFinderTests.swift */,
+				DA7B622D2C3223CB0000B116 /* ListViewModelTests.swift */,
+				DA7B622F2C3235370000B116 /* RowViewModelTests.swift */,
 			);
 			path = PropertyFinderTests;
 			sourceTree = "<group>";
@@ -283,6 +291,7 @@
 			children = (
 				DA66723A2C315430002C4406 /* propertyDetails.json */,
 				DA66722F2C302D81002C4406 /* response.json */,
+				DA7B622B2C3223620000B116 /* MockPropertyService.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -482,7 +491,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA7B622C2C3223620000B116 /* MockPropertyService.swift in Sources */,
+				DA7B62302C3235370000B116 /* RowViewModelTests.swift in Sources */,
 				DA6671DC2C2EAD21002C4406 /* PropertyFinderTests.swift in Sources */,
+				DA7B622E2C3223CB0000B116 /* ListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

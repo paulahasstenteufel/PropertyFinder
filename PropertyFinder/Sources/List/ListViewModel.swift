@@ -11,31 +11,31 @@ class ListViewModel: ObservableObject {
     @Published var isLoading = true
     @Published var items: [ModelType] = []
     
-    init() {
+    let propertyService: PropertyServiceable
+    
+    init(service: PropertyServiceable) {
+        propertyService = service
         Task {
             await fetchProperties()
         }
     }
     
     func row(for item: ModelType) -> RowViewModel {
-        return RowViewModel(modelType: item)
+        return RowViewModel(service: propertyService, modelType: item)
     }
     
-    // MARK: Private
-    private let propertyService: PropertyServiceable = PropertyService()
-
-    private func fetchProperties() async {
+    func fetchProperties() async {
         let result = await propertyService.fetchOverview()
         do {
             let response = try result.get()
             DispatchQueue.main.async { [weak self] in
                 guard let self else { return }
-                self.isLoading = false
                 self.items = response.items
+                self.isLoading = items.isEmpty
             }
             
         } catch {
-            // Next steps: Add UI error handling 
+            // Next steps: Add UI error handling
             print(error.localizedDescription)
         }
     }
