@@ -12,24 +12,26 @@ struct AreaView: View {
     
     var body: some View {
         ZStack {
-            Color.brandMedium
+            Color.brandLight
             
             BaseImageView(imageURL: model.image, largeImage: true)
                 .padding(.vertical, .ginormous)
                 .overlay {
                     VStack(alignment: .center) {
-                        Text(model.area)
+                        Text("\(model.area) Area")
                             .font(.h1)
                             .fontWeight(.bold)
                             .foregroundColor(.strong)
+                            .padding(.vertical, .large)
                         
                         Spacer()
-
+                        
                         detailsView
                             .frame(height: .lineHeight)
+                            .padding(.bottom, .large)
                     }
-                    .frame(maxHeight: .imageHeight * 1.4)
                 }
+            
         }
     }
     

@@ -13,7 +13,7 @@ extension Color {
     // Brand
     static let brandDark = Color(red: 0.449, green: 0.615, blue: 0.481, opacity: 1)
     static let brandMedium = Color(red: 0.835, green: 0.863, blue: 0.808, opacity: 1)
-    static let brandLight = Color(red: 0.835, green: 0.863, blue: 0.808, opacity: 1)
+    static let brandLight = Color(red: 0.917, green: 0.932, blue: 0.904, opacity: 0.4)
     
     // Neutral
     static let strong = Color(red: 0.071, green: 0.071, blue: 0.071, opacity: 1)

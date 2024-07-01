@@ -11,22 +11,22 @@ struct PropertyDetailsView: View {
     @State var model: Property
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack {
             ScrollView {
-                PropertyHeaderView(model: model, largeImage: true)
-                
-                Text(model.displayAskingPrice)
-                    .font(.price)
-                    .foregroundColor(.strong)
-                
-                if let description = model.description {
-                    Text(description)
-                        .font(.description)
+                VStack(alignment: .leading) {
+                    PropertyHeaderView(model: model, largeImage: true)
+                    
+                    Text(model.displayAskingPrice)
+                        .font(.price)
                         .foregroundColor(.strong)
-                        .padding(.top, .large)
-                }
-                
-                Group {
+                    
+                    if let description = model.description {
+                        Text(description)
+                            .font(.description)
+                            .foregroundColor(.strong)
+                            .padding(.vertical, .large)
+                    }
+                    
                     Text("Living area: " + model.displayLivingArea)
                     Text(model.displayNumberOfRooms)
                     Text(model.displayPatio)

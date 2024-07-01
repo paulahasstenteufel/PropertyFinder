@@ -40,5 +40,6 @@ struct RowView: View {
                 }
             }
         }
+        .onAppear(perform: viewModel.getPropertyDetails)
     }
 }

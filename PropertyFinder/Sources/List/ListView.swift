@@ -20,7 +20,10 @@ struct ListView: View {
                 
             } else {
                 NavigationView {
-                    VStack(spacing: 0) {
+                    ZStack {
+                        Color.brandMedium
+                            .ignoresSafeArea()
+                        
                         ScrollView {
                             ForEach(viewModel.items, id: \.id) { item in
                                 RowView(viewModel: viewModel.row(for: item))
@@ -31,11 +34,10 @@ struct ListView: View {
                     }
                 }
                 .navigationBarTitle("Items", displayMode: .inline)
-                .background(Color.brandDark)
             }
         }
     }
     
     // MARK: Private
-    @StateObject private var viewModel = ListViewModel()
+    @StateObject private var viewModel = ListViewModel(service: PropertyService())
 }
