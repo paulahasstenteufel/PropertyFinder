@@ -70,6 +70,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA4851E52C324BA80092086D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DA6671C72C2EAD1E002C4406 /* PropertyFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PropertyFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA6671CA2C2EAD1E002C4406 /* PropertyFinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyFinderApp.swift; sourceTree = "<group>"; };
 		DA6671CC2C2EAD1E002C4406 /* PropertyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyHeaderView.swift; sourceTree = "<group>"; };
@@ -166,6 +167,7 @@
 		DA6671C92C2EAD1E002C4406 /* PropertyFinder */ = {
 			isa = PBXGroup;
 			children = (
+				DA4851E52C324BA80092086D /* Info.plist */,
 				DA6672292C302259002C4406 /* DataModels */,
 				DA6672282C302217002C4406 /* Networking */,
 				DA6671CA2C2EAD1E002C4406 /* PropertyFinderApp.swift */,
@@ -654,9 +656,9 @@
 				DEVELOPMENT_TEAM = BA49Y2UZ8Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PropertyFinder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -684,9 +686,9 @@
 				DEVELOPMENT_TEAM = BA49Y2UZ8Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PropertyFinder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
